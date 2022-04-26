@@ -1,0 +1,8 @@
+cfe-6.0.0.src.tar.xz
+llvm-6.0.0.src.tar.xz
+/llvm-6.0.0.src
+/benchmarks
+
+/practice/no-opt
+/practice/o1-opt
+/practice/o1-opt-no-licm

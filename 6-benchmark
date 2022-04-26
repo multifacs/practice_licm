@@ -1,0 +1,25 @@
+mkdir benchmarks
+
+cset shield --exec -- perf stat -r 10 practice/no-opt/licm_5 2> benchmarks/licm_5
+cset shield --exec -- perf stat -r 10 practice/o1-opt/licm_5 2>> benchmarks/licm_5
+cset shield --exec -- perf stat -r 10 practice/o1-opt-no-licm/licm_5 2>> benchmarks/licm_5
+
+cset shield --exec -- perf stat -r 10 practice/no-opt/licm_10 2> benchmarks/licm_10
+cset shield --exec -- perf stat -r 10 practice/o1-opt/licm_10 2>> benchmarks/licm_10
+cset shield --exec -- perf stat -r 10 practice/o1-opt-no-licm/licm_10 2>> benchmarks/licm_10
+
+cset shield --exec -- perf stat -r 10 practice/no-opt/licm_20 2> benchmarks/licm_20
+cset shield --exec -- perf stat -r 10 practice/o1-opt/licm_20 2>> benchmarks/licm_20
+cset shield --exec -- perf stat -r 10 practice/o1-opt-no-licm/licm_20 2>> benchmarks/licm_20
+
+cset shield --exec -- perf stat -r 10 practice/no-opt/licm_div_5 2> benchmarks/licm_div_5
+cset shield --exec -- perf stat -r 10 practice/o1-opt/licm_div_5 2>> benchmarks/licm_div_5
+cset shield --exec -- perf stat -r 10 practice/o1-opt-no-licm/licm_div_5 2>> benchmarks/licm_div_5
+
+cset shield --exec -- perf stat -r 10 practice/no-opt/licm_div_10 2> benchmarks/licm_div_10
+cset shield --exec -- perf stat -r 10 practice/o1-opt/licm_div_10 2>> benchmarks/licm_div_10
+cset shield --exec -- perf stat -r 10 practice/o1-opt-no-licm/licm_div_10 2>> benchmarks/licm_div_10
+
+cset shield --exec -- perf stat -r 10 practice/no-opt/licm_div_20 2> benchmarks/licm_div_20
+cset shield --exec -- perf stat -r 10 practice/o1-opt/licm_div_20 2>> benchmarks/licm_div_20
+cset shield --exec -- perf stat -r 10 practice/o1-opt-no-licm/licm_div_20 2>> benchmarks/licm_div_20

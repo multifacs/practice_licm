@@ -1,0 +1,13 @@
+sudo bash -c "echo 0 > /proc/sys/kernel/randomize_va_space"
+
+for i in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+do
+  sudo bash -c "echo performance > /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor"
+done
+
+sudo cset shield -c 0,2 -k on
+
+sudo bash -c "echo 0 > /sys/devices/system/cpu/cpu1/online"
+sudo bash -c "echo 0 > /sys/devices/system/cpu/cpu3/online"
+
+sudo bash -c "echo -1 > /proc/sys/kernel/perf_event_paranoid"

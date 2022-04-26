@@ -1,0 +1,25 @@
+cd practice
+mkdir no-opt
+mkdir o1-opt
+mkdir o1-opt-no-licm
+
+../llvm-6.0.0.src/build/bin/clang++ licm_5.cpp -o no-opt/licm_5
+../llvm-6.0.0.src/build/bin/clang++ licm_10.cpp -o no-opt/licm_10
+../llvm-6.0.0.src/build/bin/clang++ licm_20.cpp -o no-opt/licm_20
+../llvm-6.0.0.src/build/bin/clang++ licm_div_5.cpp -o no-opt/licm_div_5
+../llvm-6.0.0.src/build/bin/clang++ licm_div_10.cpp -o no-opt/licm_div_10
+../llvm-6.0.0.src/build/bin/clang++ licm_div_20.cpp -o no-opt/licm_div_20
+
+../llvm-6.0.0.src/build/bin/clang++ licm_5.cpp -O1 -o o1-opt/licm_5
+../llvm-6.0.0.src/build/bin/clang++ licm_10.cpp -O1 -o o1-opt/licm_10
+../llvm-6.0.0.src/build/bin/clang++ licm_20.cpp -O1 -o o1-opt/licm_20
+../llvm-6.0.0.src/build/bin/clang++ licm_div_5.cpp -O1 -o o1-opt/licm_div_5
+../llvm-6.0.0.src/build/bin/clang++ licm_div_10.cpp -O1 -o o1-opt/licm_div_10
+../llvm-6.0.0.src/build/bin/clang++ licm_div_20.cpp -O1 -o o1-opt/licm_div_20
+
+../llvm-6.0.0.src/build-no-licm/bin/clang++ licm_5.cpp -O1 -o o1-opt-no-licm/licm_5
+../llvm-6.0.0.src/build-no-licm/bin/clang++ licm_10.cpp -O1 -o o1-opt-no-licm/licm_10
+../llvm-6.0.0.src/build-no-licm/bin/clang++ licm_20.cpp -O1 -o o1-opt-no-licm/licm_20
+../llvm-6.0.0.src/build-no-licm/bin/clang++ licm_div_5.cpp -O1 -o o1-opt-no-licm/licm_div_5
+../llvm-6.0.0.src/build-no-licm/bin/clang++ licm_div_10.cpp -O1 -o o1-opt-no-licm/licm_div_10
+../llvm-6.0.0.src/build-no-licm/bin/clang++ licm_div_20.cpp -O1 -o o1-opt-no-licm/licm_div_20

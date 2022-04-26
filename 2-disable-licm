@@ -1,0 +1,2 @@
+sed -i '141 i \ \ \ \ return false;' llvm-6.0.0.src/lib/Transforms/Scalar/LICM.cpp
+sed -i '250 i \ \ return false;' llvm-6.0.0.src/lib/Transforms/Scalar/LICM.cpp
