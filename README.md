@@ -3,7 +3,9 @@
 You might need to install packages like build-essential, cpuset and perf. Note that perf is platform-specific.
 
 Installing perf on Ubuntu:
+```bash
 sudo apt-get install linux-tools-common linux-tools-generic linux-tools-`uname -r`
+```
 https://askubuntu.com/questions/50145/how-to-install-perf-monitoring-tool
 
 Installing perf on Mint:
